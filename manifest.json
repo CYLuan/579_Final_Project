@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Virtual Study Room",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "permissions": [
+        "activeTab",
+        "alarms"
+    ],
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "books.png"
+  }
+}

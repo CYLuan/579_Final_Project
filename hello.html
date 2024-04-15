@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+    <!-- <h1>Timer Extension</h1> -->
+    <div class="module">
+        <div id="timer">00:00:00</div>
+            <button id="startButton">Start</button>
+            <button id="pauseButton">Pause</button>
+            <button id="restartButton">Restart</button>   
+    </div>
+
+    <div class="module">
+        <h2>Today's quote</h2>
+        <div id="quote">"Stay motivated!"</div> <!-- Placeholder for motivational quotes -->
+    </div>
+
+    <div class="module">
+        <select id="soundSelector">
+            <option value="rain">Rain</option>
+            <option value="cafe">Cafe</option>
+            <option value="forest">Forest</option>
+            <option value="waves">Ocean Waves</option>
+        </select>
+        <button id="muteButton">Mute</button>
+    </div>
+
+    
+    <audio id="audioPlayer" loop></audio>
+    <script src="popup.js"></script>
+</body>
+</html>
