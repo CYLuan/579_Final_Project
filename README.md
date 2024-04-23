@@ -19,6 +19,7 @@ I've achieved the features that I proposed.
 ### Resolved Struggles
 
 - The extension initially had multiple scripts setting window.onload, which caused some initialization scripts to overwrite others, leading to functionalities not loading properly when the extension started. I then consolidated all initialization scripts into a single window.onload function.
+- Initially when I muted the audio and then switched to another audio source, the new audio automatically played despite the mute button showing a muted state. To resolve this issue, I centralized the audio control logic into a single function handleAudioPlayback, which checks the isMuted state and appropriately plays or pauses the audio. This function is called after the audio data loads (onloadeddata event) and when the mute state changes, ensuring consistent application of the mute setting. 
 
 ### Future Enhancements
 
