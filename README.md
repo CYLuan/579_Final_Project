@@ -22,9 +22,8 @@ The project involved developing a Chrome extension named "Virtual Study Room" ai
 
 ### Future Enhancements
 
-- **Advanced User Settings**: Include options for users to set the number of Pomodoros before a long break and customize the length of breaks.
-- **Integration with Task Management**: Allow users to link tasks with Pomodoros, enhancing productivity tools.
-- **Cross-Platform Synchronization**: Develop functionality to sync settings and progress across devices via a user account.
+- Include options for users to set the number of Pomodoros before a long break and customize the length of breaks.
+- Enable the extension to open in a new tab for a more integrated and immersive user experience.
 
 ### Project Structure
 
