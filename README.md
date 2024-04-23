@@ -28,7 +28,7 @@ The project involved developing a Chrome extension named "Virtual Study Room" ai
 
 ### Project Structure
 
-- **`popup.html`**: Contains the HTML structure of the popup displayed when the user clicks the extension icon. It includes input controls for setting the timer, choosing themes/sounds, and viewing quotes.
+- **`hello.html`**: Contains the HTML structure of the popup displayed when the user clicks the extension icon. It includes input controls for setting the timer, choosing themes/sounds, and viewing quotes.
 - **`popup.css`**: Provides styling for the popup.
 - **`popup.js`**: Handles all the logic for timer functionality, theme switching, audio control, randomized quotes, and storage of user preferences.
 - **`manifest.json`**: Configures a Chrome extension named "Virtual Study Room", providing basic functionality with permissions to access active tabs and set alarms.
