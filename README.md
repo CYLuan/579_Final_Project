@@ -4,6 +4,7 @@
 The project involved developing a Chrome extension named "Virtual Study Room" aimed at helping users boost productivity when studying. The extension features a Pomodoro timer with customizable durations, motivational quotes, ambient themes, sound settings, and interactive controls to start, pause, and reset the timer.
 
 ### Achievements
+I've achieved the features that I proposed.
 
 - **Pomodoro Timer Functionality**: Successfully implemented the core Pomodoro functionality that includes a countdown timer which the user can start, pause, and reset.
 - **Customization Features**:
@@ -15,14 +16,14 @@ The project involved developing a Chrome extension named "Virtual Study Room" ai
   - Converted control buttons to icon-based buttons using Font Awesome for a modern, intuitive user interface.
   - Added functionality to remember user settings across sessions using local storage for themes, sounds, and timer durations.
 
-### Struggles
+### Resolved Struggles
 
-- **CSS Styling**: Ensuring that the extension's UI remained consistent and functional across different screen sizes and operating systems proved challenging but was ultimately managed through meticulous CSS testing.
-- **JavaScript Execution**: Managing multiple `window.onload` events was problematic as they interfered with each other; consolidated these into a single function to streamline execution.
+- The extension initially had multiple scripts setting window.onload, which caused some initialization scripts to overwrite others, leading to functionalities not loading properly when the extension started. I then consolidated all initialization scripts into a single window.onload function.
 
 ### Future Enhancements
 
-- Include options for users to set the number of Pomodoros before a long break and customize the length of breaks.
+- Fully Customizable Timer Durations: Extend the current customization options to allow users to specify exact minutes for Pomodoros, short breaks, and long breaks directly through an input field or slider.
+- Smart Notifications: Implement smarter notifications that suggest breaks or the next Pomodoro based on user activity or inactivity detected through the browser.
 - Enable the extension to open in a new tab for a more integrated and immersive user experience.
 
 ### Project Structure
