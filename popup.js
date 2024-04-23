@@ -4,7 +4,7 @@ let timerId = null;
 let timeRemaining = 25 * 60; // 25 minutes
 let pomodoroCount = 0;
 // sound
-let isMuted = false; // Correctly initialize isMuted in the global scope
+let isMuted = false;
 
 const quotes = [
     "Don`t stop when you`re tired. Stop when you`re done.",
@@ -79,31 +79,44 @@ document.getElementById('startButton').addEventListener('click', startTimer);
 document.getElementById('pauseButton').addEventListener('click', pauseTimer);
 document.getElementById('resetButton').addEventListener('click', resetTimer);
 
-// Sound
+// changing sound selection
 document.getElementById('soundSelector').addEventListener('change', function() {
     const sound = this.value;
     const player = document.getElementById('audioPlayer');
-    player.src = `sounds/${sound}.mp3`;
-    if (!isMuted) {
-        player.play();
-    }
+    player.src = `sounds/${sound}.mp3`;  
+    player.onloadeddata = () => {       // When the new audio is loaded
+        handleAudioPlayback(player);    // Handle playback based on mute state
+    };
 });
 
+// Event listener for the mute button
 document.getElementById('muteButton').addEventListener('click', function() {
+    isMuted = !isMuted;  
     const player = document.getElementById('audioPlayer');
-    const icon = this.querySelector('i'); // Access the icon inside the button
-    if (!isMuted) {
+    const icon = this.querySelector('i'); 
+    updateMuteIcon(icon);                
+    handleAudioPlayback(player);         
+});
+
+// Function to update the mute button icon
+function updateMuteIcon(icon) {
+    if (isMuted) {
+        icon.className = 'fas fa-volume-mute';
+        icon.closest('button').title = "Unmute";
+    } else {
+        icon.className = 'fas fa-volume-up';
+        icon.closest('button').title = "Mute";
+    }
+}
+
+// Function to handle audio playback based on the mute state
+function handleAudioPlayback(player) {
+    if (isMuted) {
         player.pause();
-        icon.className = 'fas fa-volume-mute'; 
-        this.title = "Unmute"; 
-        isMuted = true;
     } else {
         player.play();
-        icon.className = 'fas fa-volume-up'; 
-        this.title = "Mute"; 
-        isMuted = false;
     }
-});
+}
 
 
 // Quotes
