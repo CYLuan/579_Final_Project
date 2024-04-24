@@ -4,7 +4,7 @@
 The project involved developing a Chrome extension named "Virtual Study Room" aimed at helping users boost productivity when studying. The extension features a Pomodoro timer with customizable durations, motivational quotes, ambient themes, sound settings, and interactive controls to start, pause, and reset the timer.
 
 ### Achievements
-I've achieved the features that I proposed.
+I've achieved the features I proposed.
 
 - **Pomodoro Timer Functionality**: Successfully implemented the core Pomodoro functionality that includes a countdown timer which the user can start, pause, and reset.
 - **Customization Features**:
